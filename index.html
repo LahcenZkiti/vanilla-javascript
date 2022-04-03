@@ -28,7 +28,63 @@
             
         </tbody>
     </table>
+    <!-- button -->
+    <div class="btn-container">
+        <button id="add-user">Ajouter utilisateur</button>
+    </div>
+    <!-- button -->
+    <!-- table -->
 
+    <!-- modal insert -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Ajout d'utilisateurs</h2>
+                <button class="btn-close" id="btn-close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="firstName">Nom</label>
+                            <input type="text" name="firstName" id="firstName">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lastName">prénom</label>
+                            <input type="text" name="lastName" id="lastName">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="status">Etat</label>
+                            <!-- <input type="text" name="status" id="status"> -->
+                            <select name="status" id="status">
+                                <option value="Validé">Validé</option>
+                                <option value="Rejeté">Rejeté</option>
+                                <option value="En validation">En validation</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="userName">Nom d'utilisateur</label>
+                            <input type="text" name="userName" id="userName">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="createdDate">Date de création</label>
+                            <input type="date" name="createdDate" id="createdDate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="registrationNumber">Matricule</label>
+                            <input type="text" name="registrationNumber" id="registrationNumber">
+                        </div>
+                    </div>
+                    <button id="addUser">Enregistrer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- modal insert -->
     <script src="scripts.js"></script>
 </body>
 

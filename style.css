@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500&display=swap');
+
+:root {
+    --bg-grey: #eeeeee;
+    --bg-grey-dark: #686C76;
+    --bg-white: #ffffff;
+    --border-color: #dddddd;
+    --box-shadow-lg: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow-md: 0px 1px 3px rgba(0, 0, 0, 0.12);
+    --bg-green: #5BE881;
+    --bg-red: #FF0000;
+    --bg-yellow: #FDB64D;
+    --bg-button: #FFAA0A;
+    --btn-color: #5F5F5F;
+    --label-color: #707070;
+    --title-color: #272D3B;
+    --cl-black: #000;
+}
+
+body {
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    height: auto;
+    background-color: var(--bg-grey);
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+table {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 1.75rem;
+    background-color: var(--bg-white);
+    box-shadow: var(--box-shadow-lg);
+    border-radius: 8px;
+}
+
+td,
+th {
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    padding: 1rem;
+}
+
+td {
+    font-size: 0.75rem;
+    color: var(--bg-grey-dark);
+}
+
+.btn-container {
+    padding: 1rem;
+    margin-top: 1.75rem;
+    background-color: var(--bg-white);
+    box-shadow: var(--box-shadow-lg);
+    border-radius: 8px;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    background-color: var(--bg-button);
+    color: var(--btn-color);
+    font-size: 1rem;
+    box-shadow: var(--box-shadow-md);
+    border: 0;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+}
+
+svg {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.btn-close {
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.5em;
+    color: var(--cl-black);
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    border: 0;
+    border-radius: 0.5rem;
+    opacity: 0.5;
+    transition: opacity .3s ease-in-out;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+/* status */
+.status {
+    color: var(--bg-white);
+    border-radius: 8px;
+    padding: 8px;
+    display: block;
+    text-align: center;
+}
+
+.valide {
+    background-color: var(--bg-green);
+}
+
+.rejected {
+    background-color: var(--bg-red);
+}
+
+.on-validation {
+    background-color: var(--bg-yellow);
+}
+
+/* input */
+input[type=text],
+input[type=date],
+select {
+    border-radius: 4px;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: 1px solid var(--border-color);
+    width: -webkit-fill-available;
+}
+
+label {
+    display: block;
+    color: var(--label-color);
+}
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    ;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal .modal-content {
+    margin-top: 1.75rem;
+    padding: 2rem;
+    background-color: var(--bg-white);
+    box-shadow: var(--box-shadow-lg);
+    border-radius: 8px;
+
+    max-width: 65rem;
+    margin: 0 auto
+}
+
+.modal .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+}
+
+.modal .modal-header h2 {
+    margin: 0;
+    color: var(--title-color);
+}
+
+/* grid */
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 5rem;
+}
+
+.col-md-4 {
+    grid-column: span 4;
+}
